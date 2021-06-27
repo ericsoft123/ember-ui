@@ -13,11 +13,6 @@ export default class ArchiveComponent extends Component {
    /* console.log(id);
     //console.log(this.Archived);
     this.Archived = !this.Archived;*/
-
-
-
-
-
      var requestOptions = {
       method: 'PATCH',
       redirect: 'follow'
