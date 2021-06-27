@@ -10,5 +10,8 @@ Router.map(function () {
   this.route('users', function () {
     this.route('user', { path: '/:user_id' });
     this.route('index', { path: '/' });
+
   });
+ // this.route('user', { path: '/:postdata' });
+ // this.route('blog_post', { path: '/blog-post' });
 });

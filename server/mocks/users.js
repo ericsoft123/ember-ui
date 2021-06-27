@@ -8,10 +8,23 @@ module.exports = function (app) {
     catches the Update request on a user
     PATCH "localhost:4200/api/users/1"
   */
-  usersRouter.patch('/:id', function (request) {
+  usersRouter.patch('/:id', function (request,res) {
     // Update data from the UI
-    const requestBody = request.body;
-    // res.send();
+    const UserID =request.params.id;
+
+    usersJson.data.forEach((x) => {
+      // If the bookID is the one we are looking for, set it as null
+      if (x.id === UserID) {
+
+       // x.attributes.archived = true;
+        x.attributes.archived=!x.attributes.archived;
+       // console.log(x.id);
+      }
+    });
+
+    res.send(usersJson);
+
+
   });
 
   /*
@@ -46,7 +59,8 @@ const usersJson = {
     "attributes": {
       "name": "Albert Einstein",
       "image": "/images/Einstein.jpg",
-      "value": "false"
+      "value": "true"
+
     }
   },
   {
