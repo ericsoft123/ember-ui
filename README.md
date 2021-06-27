@@ -10,7 +10,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone https://github.com/lekkercode-com/ember-ui`
-* `cd user-archiving`
+* `cd ember-ui`
 * `npm install`
 
 ## Running / Development
